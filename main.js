@@ -3,10 +3,12 @@ const box=document.querySelectorAll('.content');
 window.addEventListener('scroll',showBox);
 showBox()
 function showBox(){
-        const lastBox=window.innerHeight*0.8
+        const heightWindow=window.innerHeight*0.7
+       
         box.forEach(elemenet => {
             const boxTop=elemenet.getBoundingClientRect().top
-            if (boxTop<lastBox){
+            
+            if (boxTop<heightWindow){
                 elemenet.classList.add('show');
             }
             else{
